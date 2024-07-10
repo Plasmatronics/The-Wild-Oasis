@@ -1073,5 +1073,7 @@ Vite automaitacllly gave us a gitignore than will ignore the dist folder nad nod
 
 Now lets make some change and have that reflect in our remote repository...
 We first must add it to our staging area
+then we can immediately commit with a message
+Now we can push it to our remote "repo" (short for repository)
 
 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
