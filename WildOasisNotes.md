@@ -1061,7 +1061,7 @@ git push -u (the name of the remote one) (the name of our local branch we want t
 
 -U means were pushing upstream
 
-in our case the line is: git push -u origin main
+in our case the line isgit push -u origin main: git push -u origin main
 
 Now you can go to github and you will see your files on github
 
@@ -1076,4 +1076,6 @@ We first must add it to our staging area
 then we can immediately commit with a message
 Now we can push it to our remote "repo" (short for repository)
 
-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
+just make sure when you push you are in the right branch or you might get an error...
+in our case we do this to ensure we are in "main"
+git branch -M main
