@@ -1079,3 +1079,12 @@ Now we can push it to our remote "repo" (short for repository)
 just make sure when you push you are in the right branch or you might get an error...
 in our case we do this to ensure we are in "main"
 git branch -M main
+
+## DEPLOYING TO VERCEL
+
+we could also set up continous integration w netlify via connecting netlify and a github repo but lets look at an alternative: vercel.
+They actually created next.js so they specialize in hosting these projects.
+
+just connect your vercel account and github to make it very easy to setup projects.
+
+Honestly theres not much to add here becaues vercel is so streamlined, but notice in the build and output settings... notice the build command... this gets run everytime theres a new change to the remote github repository (so we push something to that repsoroty it will then go live). This is why we call it conitnous integration.
