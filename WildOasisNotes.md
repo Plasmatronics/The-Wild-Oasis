@@ -1035,7 +1035,43 @@ to check that status of your staging area and see what files are in them you can
 to add all files you can do "git add -A"
 Now all files are added/tracked
 if now we change any file it will show up with an "M" next to the file name showing it has been modified.
+If we wanted to add this now modified file we would have to add it again via "git add"
 
 Ok so now lets save a snapshot of the repository as it exists in this current moment... in github this is called a commit...
 git commit -m "initial Commit"
-This -m allows you to add a messsage for this specific commit
+This -m allows you to add a messsage for this specific commit.
+So now this clears our "working tree" and all the A, M, and Us next to our files disappear bc the snapshot has been safely commited to github.
+
+### creating a remote repository on github and connecting it to our local one
+
+Ok so now this local snapshot has been commited lets go on github to create a repostiory which exists as a cloud repository pretty much... the idea is we will connect this two to make local and cloud communication very easy...
+
+on github before we go any further lets set up an "access token", which well use instead of a password to connect the cloud and local repostiories.
+
+Ok so well go into githubs developer settings, and create a token (in the personal access tokens section), set the expiration for the token to 90 days and give it scope of the entire repo (so check repo)
+
+Now store this token somewhere very very safe... treat it like a password because it kinda is
+
+Now well go to github and type this command:
+git remote add origin {github repostiory url}
+
+Now our local repostiory knows about this remote repository
+Now lets "push" our local repostiory to our remote repository...
+git push -u (the name of the remote one) (the name of our local branch we want to push to the remote one)
+
+-U means were pushing upstream
+
+in our case the line is: git push -u origin main
+
+Now you can go to github and you will see your files on github
+
+Whenever in the termiinal you are asked for your email and password you can put your email and this access token we mentioned.
+
+Vite automaitacllly gave us a gitignore than will ignore the dist folder nad node_modules because it is very very easy to recompute them, so no need to spend the storage pushing them
+
+### whenever we want to update our repostirory with updates via vs code
+
+Now lets make some change and have that reflect in our remote repository...
+We first must add it to our staging area
+
+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

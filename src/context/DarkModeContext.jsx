@@ -1,6 +1,5 @@
 import { createContext, useContext, useEffect } from "react";
 import { useLocalStorageState } from "../hooks/useLocalStorageState";
-import { FaBullseye } from "react-icons/fa";
 
 const DarkModeContext = createContext();
 
