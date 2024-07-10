@@ -30,6 +30,7 @@ function App() {
     <DarkModeProvider>
       <QueryClientProvider client={queryClient}>
         <ReactQueryDevtools initialIsOpen={false} />
+
         <GlobalStyles />
         <BrowserRouter>
           <Routes>
@@ -50,6 +51,7 @@ function App() {
               <Route path="settings" element={<Settings />} />
               <Route path="account" element={<Account />} />
             </Route>
+
             <Route path="login" element={<Login />} />
             <Route path="*" element={<PageNotFound />} />
           </Routes>
